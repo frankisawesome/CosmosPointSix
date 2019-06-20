@@ -1,11 +1,11 @@
 //Modules
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
+
 
 //db connection
-mongoose.connect('mongodb://threepointsix:6WDIqlmiGdnM8T8ttvuia1BpTRkDP6Ng9afLzI4x9IIbWFLho6vVd4Ng3Csz7cXCTpF9LE9roV9PnH4ul6bVYw%3D%3D@threepointsix.documents.azure.com:10255/?ssl=true')
+mongoose.connect(process.env.DB_CON)
   .then(() => console.log('Connection to CosmosDB successful'))
   .catch((err) => console.error(err));
 
@@ -17,6 +17,8 @@ const resultsRouter = require('./result')
 const app = express();
 
 app.use(express.json())
+
+app.use(express.static('./build/'))
 
 //Catch routes
 app.use('/api', postsRouter);
