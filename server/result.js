@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     res.json({
         message: "Hit a specific results endpoint with a get request to obtain desired sorted results",
         schema: {
-            time: "A string type of year/month/week/day",
+            time: "A string type of year/month/week/da",
             data: "An array of length 10 containing the top ten messages posted in the desired timeframes"
         }
     })
