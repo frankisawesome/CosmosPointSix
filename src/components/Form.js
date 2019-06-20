@@ -42,13 +42,6 @@ export function AppForm(props) {
             return res.json()
         })
         .then((res) => {
-            const result = []
-            res.map((obj) => {
-                result.push(obj.message);
-            })
-            return result;
-        })
-        .then((res) => {
             props.setData(res);
         })
         .then(() => props.setLoading(false))

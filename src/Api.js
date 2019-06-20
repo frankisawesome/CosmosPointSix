@@ -1,11 +1,11 @@
-const url = 'https://threepointsix.azurewebsites.net/api/post';
+const url = '/api';
 
 export function PostNew(message) {
     const body = JSON.stringify({
-        "Message": message,
-        "Authors": ["thatoneguy"]
+        "message": message,
+        "userId": "thatoneguy"
     })
-    return fetch(url, {
+    return fetch(url+'/new', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ export function PostNew(message) {
 }
 
 export function GetMessages() {
-    return fetch(url, {
+    return fetch(url+'/get', {
         method: 'GET',
     })
 }

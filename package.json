@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "debug": "~2.6.3",
-    "express": "^4.15.3",
     "bootstrap": "^4.3.1",
+    "debug": "~2.6.9",
     "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "mongoose": "^5.5.15",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
@@ -14,15 +15,26 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
     "nodemon": "^1.12.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "start": "react-scripts start",
     "build": "react-scripts build && mv build server",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
