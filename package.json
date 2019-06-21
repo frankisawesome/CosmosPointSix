@@ -23,7 +23,7 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "npm install && npm run build  && node server/bin/www",
+    "start": "npm install && npm run build  && node /home/site/wwwroot/server/bin/www",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
