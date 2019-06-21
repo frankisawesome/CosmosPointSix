@@ -1,58 +1,13 @@
-# Express React Starter
+## Development
 
-This is a template for using Express and React in the same project. It is based on Create React App.
+Cosmos Point Six is a MERN stack 'hello world' like project developed by Frank Li in collaboration with Sebastian Muir-Smith. The app is a simple message board app, allowing users to post whatever string and get the top ten most popular strings from the database. The front end uses react, is coded in the latest functional component + react hooks style. The backend uses express + node, to achieve a simple API with /new and /get endpoints. Mongoose is used for database queries and connection.
 
-Read the article: [Introducing Express React Starter](https://medium.com/burke-knows-words/introducing-express-react-starter-b6d299206a3a)
+## Deployment
 
-OR...
+Cosmos Point Six is deployed using the Microsoft Azure platform. The database is the Cosmos DB with MongoDB API, which requires a simple setup process and is fairly robust. The front end is being displayed as part of the express server using express.static() middleware. The backend code is then deployed to Azure via github. The npm start script includes scripts to install all required modules then run the app.js as the entrypoint.
 
-## Prerequisites
-* [create-react-app](https://github.com/facebookincubator/create-react-app)
+## About Us
 
-## Installing
+Me (Frank Li) and Sebastian are both second year Math/IT students at QUT, and this is our first attempt at developing and deploying a 'full stack' web project.
 
-```bash
-git clone 'this-repo-url' app-name
-cd app-name
-npm install
-```
 
-## Running The App
-
-The template can be run in development, or in production. For development, use the following workflow.
-
-### Start the Express Server
-
-```bash
-node server/server.js
-```
-
-### Start Create React App
-
-In a different terminal tab...
-
-```bash
-npm start
-```
-
-![Imgur](http://i.imgur.com/f7Nlvx4.png)
-
-The "Welcome to React" is a message that comes from the Express server. 
-
-### What Is Happening Here?
-
-Create React App and the Express server are running on different processes. This is so that React can still use in memory Webpack to do hot reloads really fast.
-
-All AJAX/fetch requests to `/api` are sent back to the Express server which is serving all `/api` routes from the `routes/index.js` file. This is done via a proxy setup in the `package.json` file.
-
-## Building For Production
-
-In production, you want Express to serve up your app.
-
-### Build React App
-
-```bash
-npm build
-```
-
-Now simply visit the Express app at 'http://localhost:3001' and you will see your app served from the 'build' folder. That's all there is to it!
