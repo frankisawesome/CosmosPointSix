@@ -25,5 +25,7 @@ app.use('/api', postsRouter);
 app.use('/api', resultsRouter)
 
 
-app.listen(3001, () => console.log('ThreePointSix API listening on port 3001'))
+const port = process.env.PORT || 3000
+
+app.listen(port, () => console.log(`ThreePointSix API listening on port ${port}`))
 module.exports = app;
