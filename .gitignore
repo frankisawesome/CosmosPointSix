@@ -8,7 +8,6 @@ server/node_modules
 /coverage
 
 # production
-/build/*
 package-lock.json
 /server/.env
 
