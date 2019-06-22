@@ -52,7 +52,7 @@ export function AppForm(props) {
 
     return (
         <Card.Body>
-            <Card.Title>Leave your message, or see what's trending on Three Point Six.</Card.Title>
+            <Card.Title>Leave your message, or see what's trending on Cosmos Point Six.</Card.Title>
             <InputGroup>
                 <FormControl
                     placeholder="Your message"

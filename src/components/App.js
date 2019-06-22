@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <Card>
-        <Card.Header>Three Point Six</Card.Header>
+        <Card.Header>Cosmos Point Six</Card.Header>
         {(render === 'form') ? <AppForm {...controlProps} /> : <Result {...controlProps} data={data} err = {err} loading = {loading}/>}
         <p>A little experimental MERN stack app by Frank Li and Sebastian Muir-Smith @ QUT, Brisbane</p>
       </Card>
