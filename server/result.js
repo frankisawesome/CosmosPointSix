@@ -52,7 +52,7 @@ function TopTen(array) {
     let count = 0;
 
     //Find the count for all messages and store the count and message as objects in a new array
-    for (var i = 0; i <= array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i] != current) {
             if (count > 0) {
                 objArr.push({
